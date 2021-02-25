@@ -92,6 +92,16 @@ public class Main {
 //                System.out.print(b.charAt(i));
 //            }
 //        }
+//        Main m = new Main();
+//        int[] a = {2,34,65,70};
+//        m.vidurkis(a);
+//    }
+//    public void vidurkis(int[] a){
+//        float suma = 0;
+//        for (int i = 0; i<a.length; i++){
+//            suma +=a[i];
+//        }
+//        System.out.println(suma/a.length);
 
     }
 }
