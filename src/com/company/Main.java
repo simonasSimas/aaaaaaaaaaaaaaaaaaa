@@ -27,33 +27,46 @@ public class Main {
 //                System.out.print(i + " ]");
 //            }
 //        }
-        Scanner sc = new Scanner(System.in);
-        boolean darboDiena = false;
-        boolean atostogos = false;
-        System.out.println("Ar tai darbo diena? (Y/N) : ");
-        String darboDienaString = sc.nextLine();
-        System.out.println("Ar jums atostogos? (Y/N) : ");
-        String atostogosString = sc.nextLine();
-        if (darboDienaString.equals("Y")){
-            darboDiena = true;
-        }
-        if (atostogosString.equals("Y")){
-            atostogos=true;
-        }
-        if (darboDienaString.equals("N")){
-            darboDiena = false;
-        }
-        if (atostogosString.equals("N")){
-            atostogos=false;
-        }
-        if (darboDiena){
-            if (atostogos){
-                System.out.println("Galima miegoti");
-            } else {
-                System.out.println("Negalima miegoti");
-            }
-        }else {
-            System.out.println("Galima miegoti");
-        }
+//        Scanner sc = new Scanner(System.in);
+//        boolean darboDiena = false;
+//        boolean atostogos = false;
+//        System.out.println("Ar tai darbo diena? (Y/N) : ");
+//        String darboDienaString = sc.nextLine();
+//        System.out.println("Ar jums atostogos? (Y/N) : ");
+//        String atostogosString = sc.nextLine();
+//        if (darboDienaString.equals("Y")){
+//            darboDiena = true;
+//        }
+//        if (atostogosString.equals("Y")){
+//            atostogos=true;
+//        }
+//        if (darboDienaString.equals("N")){
+//            darboDiena = false;
+//        }
+//        if (atostogosString.equals("N")){
+//            atostogos=false;
+//        }
+//        if (darboDiena){
+//            if (atostogos){
+//                System.out.println("Galima miegoti");
+//            } else {
+//                System.out.println("Negalima miegoti");
+//            }
+//        }else {
+//            System.out.println("Galima miegoti");
+//        }
+//        int a=0;
+//        int b =0;
+//        int c=0;
+//        int d = 0;
+//        for (int i = 100; i<1000; i++){
+//            c=i%10;
+//            b=i/10%10;
+//            a=i/100%10;
+//            if ((a*a*a)+(b*b*b)+(c*c*c)==i){
+//                System.out.println(i);
+//            }
+//        }
+
     }
 }
