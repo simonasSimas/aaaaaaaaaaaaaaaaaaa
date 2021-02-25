@@ -102,6 +102,7 @@ public class Main {
 //            suma +=a[i];
 //        }
 //        System.out.println(suma/a.length);
-
+//        CounterSub sub = new CounterSub(2);
+//        sub.increment();
     }
 }
