@@ -67,6 +67,31 @@ public class Main {
 //                System.out.println(i);
 //            }
 //        }
+//        Main m = new Main();
+//        m.mixString("Labas", "Vakaras");
+//    }
+//    public void mixString(String a, String b){
+//        int x = a.length();
+//        int z = b.length();
+//        if (x>z){
+//            for (int i = 0; i<z;i++){
+//                System.out.print(a.charAt(i));
+//                System.out.print(b.charAt(i));
+//            }
+//            int c = x-z;
+//            for (int i = x-c; i<x;i++){
+//                System.out.print(a.charAt(i));
+//            }
+//        }else if (x<z){
+//            for (int i = 0; i<x;i++){
+//                System.out.print(a.charAt(i));
+//                System.out.print(b.charAt(i));
+//            }
+//            int c = z-(z-x);
+//            for (int i = c; i<z;i++){
+//                System.out.print(b.charAt(i));
+//            }
+//        }
 
     }
 }
