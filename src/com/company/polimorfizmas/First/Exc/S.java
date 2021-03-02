@@ -1,4 +1,4 @@
-package com.company.polimorfizmas;
+package com.company.polimorfizmas.First.Exc;
 
 public class S extends A{
     public S() {

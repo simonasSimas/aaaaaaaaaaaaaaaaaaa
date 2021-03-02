@@ -1,4 +1,4 @@
-package com.company.polimorfizmas;
+package com.company.polimorfizmas.Second.Exc;
 
 public class AutomobilioDraudimas extends Draudimas{
     private String automobilioValstNr;

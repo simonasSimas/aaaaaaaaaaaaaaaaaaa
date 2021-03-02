@@ -1,4 +1,4 @@
-package com.company.Exceptions;
+package com.company.exceptions;
 
 public class VaziuoklesIsskleidimoKlaida extends Exception{
     private String priezastis;
