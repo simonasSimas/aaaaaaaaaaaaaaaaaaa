@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Interface;
 
 public interface IsLandVehicle extends IsVehicle{
     int getNumWheels();

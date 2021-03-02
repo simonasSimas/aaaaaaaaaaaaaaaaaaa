@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Exceptions;
 
 import java.util.Random;
 

@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Interface;
 
 public class Jeep implements IsLandVehicle{
     private int maxSpeed;

@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Interface;
 
 public class PoliceCar implements IsEmergency, IsLandVehicle{
 
