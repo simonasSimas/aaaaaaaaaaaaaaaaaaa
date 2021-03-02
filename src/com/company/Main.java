@@ -1,10 +1,14 @@
 package com.company;
 
+import com.company.exceptions.*;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws DeviceIsOffException, NoNetworkException {
 //        Scanner sc = new Scanner(System.in);
 //        System.out.print("Iveskite intervalo pradzia: ");
 //        int a = sc.nextInt();
@@ -104,6 +108,22 @@ public class Main {
 //        System.out.println(suma/a.length);
 //        CounterSub sub = new CounterSub(2);
 //        sub.increment();
-        
+//        Monitoring monitoring = new Monitoring();
+//        List<Device> devices = new ArrayList<>();
+//        devices.add(new Mouse(true, 0));
+//        devices.add(new Monitor(true, 1));
+//        devices.add(new Printer(true, 2));
+//        monitoring.pingAllDevices(devices);
+//        devices.get(2).setOn(false);
+//        monitoring.pingAllDevices(devices);
+
+        EmailSender mailSender = new EmailSender();
+        List<Email> emails = new ArrayList<>();
+        emails.add(new Email("body1", "subject1", "aaa@aaa.lt"));
+        emails.add(new Email("body2", "subject2", "bbb@bbb.lt"));
+        emails.add(new Email("body3", "subject3", "ccc@ccc.lt"));
+        emails.add(new Email("body4", "subject4", "ddd@ddd.lt"));
+        emails.add(new Email("body5", "subject5", "eee@eee.lt"));
+        mailSender.sendEmail(emails);
     }
 }
