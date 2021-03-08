@@ -72,4 +72,12 @@ public class Person implements Qualification,Likes{
     public int getLikeCount() {
         return likeCount;
     }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", qualification='" + qualification + '\'' +
+                '}';
+    }
 }
