@@ -2,11 +2,15 @@ package com.company.polimorfizmas.papildoma;
 
 import java.util.List;
 
-public class Person implements Qualification,Likes{
+public class PersonImpl implements Qualification,Likes{
     private String name;
     private String qualification;
     private int likeCount=0;
 
+    public PersonImpl(String name, String qualification) {
+        this.name = name;
+        this.qualification = qualification;
+    }
 
     @Override
     public String getName() {
@@ -33,32 +37,28 @@ public class Person implements Qualification,Likes{
     }
 
     @Override
-    public void likes(Person receiver) {
+    public void likes(PersonImpl receiver) {
         receiver.setLikeCount();
     }
 
-    @Override
-    public int howManyLikesDoesThisEmployeeHave(Person personel) {
-        return personel.getLikeCount();
-    }
+
 
     @Override
-    public int howManyLikesDoesThisBranchOfQualificationHave(Person person, List<Person> list) {
-        String qualification = person.getQualification();
+    public int howManyLikesDoesThisBranchOfQualificationHave(PersonImpl personImpl, List<PersonImpl> list) {
+        String qualification = personImpl.getQualification();
         int sum = 0;
-        for (Person personList : list){
-            if (qualification.equals(personList.getQualification())){
-                sum +=personList.getLikeCount();
+        for (PersonImpl personImplList : list){
+            if (qualification.equals(personImplList.getQualification())){
+                sum += personImplList.getLikeCount();
             }
         }
         return sum;
     }
 
-    @Override
-    public int howManyLikesInTotal(List<Person> list) {
+    public static int howManyLikesInTotal(List<PersonImpl> list) {
         int sum = 0;
-        for (Person personList : list){
-            sum += personList.getLikeCount();
+        for (PersonImpl personImplList : list){
+            sum += personImplList.getLikeCount();
         }
         return sum;
     }
@@ -75,7 +75,7 @@ public class Person implements Qualification,Likes{
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "PersonImpl{" +
                 "name='" + name + '\'' +
                 ", qualification='" + qualification + '\'' +
                 '}';

@@ -1,16 +1,15 @@
 package com.company.polimorfizmas.papildoma;
 
 
-import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args) throws WrongOptionException {
-        Person juniorDeveloper = createPersonel(new Person());
-        Person seniorDeveloper = createPersonel(new Person());
-        Person midDeveloper = createPersonel(new Person());
-        Person projectManager = createPersonel(new Person());
+        PersonImpl juniorDeveloper = new PersonImpl("aaaa", "Developer");
+        PersonImpl seniorDeveloper = new PersonImpl("bbb", "Developer");
+        PersonImpl midDeveloper = new PersonImpl("ccc", "Developer");
+        PersonImpl projectManager = new PersonImpl("ddd", "Manager");
         Personel personel = new Personel();
         personel.addPersonel(juniorDeveloper);
         personel.addPersonel(seniorDeveloper);
@@ -18,10 +17,33 @@ public class Program {
         personel.addPersonel(projectManager);
 
         juniorDeveloper.likes(seniorDeveloper);
-        System.out.println(seniorDeveloper.getLikeCount());
+        juniorDeveloper.likes(seniorDeveloper);
+        juniorDeveloper.likes(midDeveloper);
+        juniorDeveloper.likes(seniorDeveloper);
+        juniorDeveloper.likes(seniorDeveloper);
+        juniorDeveloper.likes(midDeveloper);
+        juniorDeveloper.likes(seniorDeveloper);
+        juniorDeveloper.likes(projectManager);
+        juniorDeveloper.likes(seniorDeveloper);
+        juniorDeveloper.likes(projectManager);
+        juniorDeveloper.likes(seniorDeveloper);
+        juniorDeveloper.likes(projectManager);
+        juniorDeveloper.likes(projectManager);
+        midDeveloper.likes(juniorDeveloper);
+        midDeveloper.likes(juniorDeveloper);
+        midDeveloper.likes(juniorDeveloper);
+
+        System.out.println("Junior developer: " + personel.getPerson("aaaa").getLikeCount());
+        System.out.println("Senior developer: " + personel.getPerson("bbb").getLikeCount());
+        System.out.println("Mid developer: " + personel.getPerson("ccc").getLikeCount());
+        System.out.println("Project manager: " + personel.getPerson("ddd").getLikeCount());
+
+        System.out.println("Developers got : " + juniorDeveloper.howManyLikesDoesThisBranchOfQualificationHave(juniorDeveloper,personel.getPersonel()) + " likes");
+        System.out.println("Managers got: " + projectManager.howManyLikesDoesThisBranchOfQualificationHave(projectManager, personel.getPersonel()) + " likes");
+        System.out.println("In total there were " + PersonImpl.howManyLikesInTotal(personel.getPersonel()) + " likes in total");
     }
 
-    static Person createPersonel(Person personel) throws WrongOptionException {
+    static PersonImpl createPersonel(PersonImpl personel) throws WrongOptionException {
         try{
             Scanner sc = new Scanner(System.in);
             System.out.print("Iveskite savo varda: ");

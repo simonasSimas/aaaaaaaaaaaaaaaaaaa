@@ -1,39 +1,17 @@
 package com.company.polimorfizmas.papildoma;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class Personel extends Person{
-    ArrayList<Person> personel = new ArrayList<>();
+public class Personel {
+    ArrayList<PersonImpl> personel = new ArrayList<>();
 
-    public void  addPersonel(Person person){
-        personel.add(person);
+
+    public void addPersonel(PersonImpl personImpl) {
+        personel.add(personImpl);
     }
 
-    @Override
-    public int howManyLikesDoesThisBranchOfQualificationHave(Person person, List<Person> list) {
-        String qualification = person.getQualification();
-        int sum = 0;
-        for (Person p : list) {
-            if (p.getQualification().equals(qualification)){
-                sum +=p.getLikeCount();
-            }
-        }
-        return sum;
-    }
-
-    @Override
-    public int howManyLikesDoesThisEmployeeHave(Person person) {
-        return person.getLikeCount();
-    }
-
-    @Override
-    public int howManyLikesInTotal(List<Person> list) {
-        int sum =0;
-        for (Person p : list){
-            sum +=p.getLikeCount();
-        }
-        return sum;
+    public ArrayList<PersonImpl> getPersonel() {
+        return personel;
     }
 
     @Override
@@ -41,5 +19,15 @@ public class Personel extends Person{
         return "Personel{" +
                 "personel=" + personel.toString() +
                 '}';
+    }
+
+    public PersonImpl getPerson(String name) {
+        for (PersonImpl p : personel
+        ) {
+            if (name.equals(p.getName())) {
+                return p;
+            }
+        }
+        return null;
     }
 }

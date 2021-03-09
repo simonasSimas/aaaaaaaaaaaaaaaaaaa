@@ -3,10 +3,8 @@ package com.company.polimorfizmas.papildoma;
 import java.util.List;
 
 public interface Likes {
-    void likes(Person receiver);
-    int howManyLikesDoesThisEmployeeHave(Person person);
-    int howManyLikesDoesThisBranchOfQualificationHave(Person person, List<Person> list);
-    int howManyLikesInTotal(List<Person> list);
+    void likes(PersonImpl receiver);
+    int howManyLikesDoesThisBranchOfQualificationHave(PersonImpl personImpl, List<PersonImpl> list);
     void setLikeCount();
     int getLikeCount();
 
